@@ -159,3 +159,11 @@ def pandigital num
 end
 pandigital(12457)
 
+# Word Frequency
+def word_frequency string
+    change_arr = string.split(' ')
+    frequent = change_arr.uniq.max_by {|w|change_arr.count(w)}
+    puts "#{frequent} = the most used word"
+    puts "counter hash = #{change_arr.tally}"
+end
+word_frequency("I am silly coder who sometimes forgets and forgets to eat when I am working working working")
