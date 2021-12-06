@@ -83,7 +83,6 @@ end
 puts multiply_each_by_five([5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0])
 
 # Methods With a Hash
-
 book = {
   name: 'book',
   title: 'The Great Gatsby',
@@ -117,3 +116,26 @@ def print_item_sums hash1, hash2
 end
 print_item_sums(lamp, book)
 
+# Euler Problem
+nums = Array(1...1000)
+result = 0
+nums.each do |n|
+    if n % 3 == 0 && n % 5 == 0
+        result += n
+    end
+end
+puts "Sum of all multiples of 3 and 5 = #{result}"
+
+# Primes
+require 'prime'
+def check_prime? num
+    puts "is #{num} a prime number? #{Prime.prime?(num)}"
+end
+check_prime?(4)
+
+def get_primes num
+    Prime.each(num) do |prime|
+        check_prime?(prime)
+    end
+end
+get_primes(100)
