@@ -139,3 +139,23 @@ def get_primes num
     end
 end
 get_primes(100)
+
+# Pandigital
+def pandigital num
+    if num == 0
+        puts "zero is not pandigital #{false}"
+    elsif num.to_s.length > 9
+        puts "too long pandigital: #{false}"
+    elsif num == 10
+        puts "ten is not pandigital: #{false}"
+    else
+        num_arr = num.to_s.split('')
+        if num_arr.uniq == num_arr
+            puts "heck ya it is pandigital: #{true}"
+        else
+            puts "can't have duplicates not pandigital: #{false}"
+        end
+    end
+end
+pandigital(12457)
+
