@@ -54,18 +54,23 @@ p "last five numbers = #{nums.last(5)}"
 p "group_by modulo 3 = #{nums.group_by{|n|n%3}}"
 
 p "smallest num = #{nums.min}"
-
 p "largest num = #{nums.max}"
+p "smallest and largest = #{nums.minmax}"
 
 p "numbers that are not divisible by three = #{nums.reject{|n|n%3==0}}"
 
 p "numbers that are divisible by five = #{nums.select{|n|n%5==0}}"
 
+# Color Array
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 
+p "Random Color = #{colors.sample}"
 
+puts "Reverse the array = #{colors.reverse}"
+# each mutates original map does not
+puts "All Caps for colors = #{colors.map{|c|c.upcase}}"
 
-
-
+# Methods
 
 
 
